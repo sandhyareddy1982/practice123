@@ -10,12 +10,17 @@
   - name: httpd start
     service:
       name: httpd
-      state: present  
+      state: started  
 
   - name: copy content
     copy: 
       dest: /var/www/html
       src: index.html
+      
+  - name: httpd start
+    service: 
+      name: httpd
+      state: started
 
   
   
