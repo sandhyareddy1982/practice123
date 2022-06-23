@@ -6,5 +6,16 @@
     yum:
       name: httpd
       state: present  
+
+  - name: httpd start
+    service:
+      name: httpd
+      state: present  
+
+  - name: copy content
+    copy: 
+      dest: /var/www/html
+      src: index.html
+
   
   
